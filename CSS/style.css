@@ -26,6 +26,16 @@ button {
 body {
   padding: 4rem;
 }
+.buttonContainer {
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid gray;
+  column-gap: 50px;
+  justify-content: center;
+  align-items: start;
+  min-height: 90vh;
+  padding: 2rem;
+}
 .btn1 {
   padding: 0.5rem;
   background-color: transparent;
@@ -47,6 +57,9 @@ body {
   border-right-color: red;
   border-bottom-color: blue;
   border-left-color: blue;
+}
+.btn1--shadow {
+  box-shadow: 2px 2px 0px 0px green;
 }
 /* BUTTON WITH BORDER GRADIENT */
 .btn2 {
