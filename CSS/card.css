@@ -3,8 +3,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  outline: 2px solid red;
-  background-color: hsla(0, 100%, 50%, 0.05);
+  /* outline: 2px solid red; */
+  /* background-color: hsla(0, 100%, 50%, 0.05); */
 }
 * {
   margin: 0;
@@ -29,31 +29,61 @@ button {
   --blue-3: #2e6f95;
   --blue-2: #1780a1;
   --blue-1: #0091ad;
+  --BG-COLOR: white;
 }
-/* CHANGING GRADIENTS ANIMATION */
-@property --start {
-  syntax: "<color>";
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
   inherits: false;
-  initial-value: red;
 }
-@property --end {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: blue;
-}
-.cardContainer {
-  background-color: var(--BG-COLOR);
-  display: grid;
-  place-content: center;
-}
-
-@keyframes changingGradient {
+@keyframes rotation {
   0% {
-    --start: red;
-    --end: blue;
+    --gradient-angle: 0deg;
   }
   100% {
-    --start: blue;
-    --end: red;
+    --gradient-angle: 360deg;
   }
+}
+/* GENERAL STYLES */
+body {
+  background-color: var(--BG-COLOR);
+}
+.cardContainer {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+.card {
+  height: 250px;
+  aspect-ratio: 1/1.5;
+  background-color: white;
+  position: relative;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  background-image: conic-gradient(
+    from var(--gradient-angle),
+    var(--blue-1),
+    var(--blue-2),
+    var(--blue-3),
+    var(--blue-4),
+    var(--purple-2),
+    var(--purple-1),
+    var(--red-3),
+    var(--red-2),
+    var(--red-1),
+    var(--blue-1)
+  );
+  animation: rotation 10s infinite linear;
+}
+.card::after {
+  filter: blur(3.5rem);
 }
