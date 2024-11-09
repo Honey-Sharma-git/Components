@@ -3,8 +3,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  outline: 2px solid red;
-  background-color: hsla(0, 100%, 50%, 0.1);
+  /* outline: 2px solid red; */
+  /* background-color: hsla(0, 100%, 50%, 0.1); */
 }
 * {
   margin: 0;
@@ -15,12 +15,57 @@ img {
 }
 button {
   font: inherit;
+  cursor: pointer;
 }
 
 /*VARIABLES*/
 
-
 /* UTILITY CLASSES */
 
-
 /* GENERAL STYLES*/
+body {
+  padding: 4rem;
+}
+.btn1 {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 2px solid blue;
+  border-radius: 7px;
+  color: blue;
+}
+.btn1--alt {
+  color: white;
+  background-color: blue;
+}
+.btn1--gradient {
+  background-image: linear-gradient(20deg, blue, red);
+  color: white;
+  border-image: linear-gradient(20deg, blue, red) 1;
+}
+.btn1--borders {
+  border-top-color: red;
+  border-right-color: red;
+  border-bottom-color: blue;
+  border-left-color: blue;
+}
+/* BUTTON WITH BORDER GRADIENT */
+.btn2 {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  border-radius: 7px;
+  background-image: linear-gradient(20deg, blue, red);
+  color: white;
+  font-weight: bolder;
+}
+.btn2::before {
+  content: "";
+  padding: 0.5rem;
+  border-radius: 7px;
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  background-color: pink;
+  background-image: linear-gradient(20deg, blue, red);
+}
