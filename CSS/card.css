@@ -19,7 +19,7 @@ button {
 
 /*VARIABLES*/
 :root {
-  /* colors  */
+  /* colors*/
   --red-1: #b7094c;
   --red-2: #a01a58;
   --red-3: #892b64;
@@ -58,7 +58,6 @@ body {
   aspect-ratio: 1/1.5;
   background-color: white;
   position: relative;
-  /* border: 1px solid white; */
   border-radius: 5px;
 }
 
@@ -86,4 +85,72 @@ body {
 }
 .card::after {
   filter: blur(3.5rem);
+}
+/* ///////////SECOND CARD STYLES\\\\\\\\\\\\ */
+@property --x-cord {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+@property --y-cord {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+@keyframes movingGrad {
+  0% {
+    --x-cord: 0px;
+    --y-cord: 0px;
+  }
+  25% {
+    --x-cord: 300px;
+    --y-cord: 0px;
+  }
+  50% {
+    --x-cord: 300px;
+    --y-cord: 200px;
+  }
+  75% {
+    --x-cord: 0px;
+    --y-cord: 200px;
+  }
+  100% {
+    --x-cord: 0px;
+    --y-cord: 0px;
+  }
+}
+.card1 {
+  min-height: 300px;
+  padding: 2rem;
+  aspect-ratio: 1.25/1;
+  background-color: transparent;
+  z-index: 1;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-items: center;
+  column-gap: 20px;
+}
+.card1::after,
+.card1::before {
+  content: "";
+  background-image: radial-gradient(
+    circle 200px at var(--x-cord) var(--y-cord),
+    var(--red-1),
+    var(--purple-1),
+    var(--blue-1)
+  );
+  filter: blur(4px);
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  animation: movingGrad 20s linear infinite;
+}
+.part {
+  background-color: aliceblue;
+  padding: 1rem;
+  box-shadow: 1px 1px 15px 1px gray;
+  border-radius: 10px;
 }
