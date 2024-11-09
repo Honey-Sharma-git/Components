@@ -1,0 +1,27 @@
+/* CHANGING GRADIENTS ANIMATION */
+@property --start {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: red;
+}
+@property --end {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: blue;
+}
+.cardContainer {
+  background-color: var(--BG-COLOR);
+  display: grid;
+  place-content: center;
+}
+
+@keyframes changingGradient {
+  0% {
+    --start: red;
+    --end: blue;
+  }
+  100% {
+    --start: blue;
+    --end: red;
+  }
+}
