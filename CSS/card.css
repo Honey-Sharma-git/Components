@@ -154,3 +154,48 @@ body {
   box-shadow: 1px 1px 15px 1px gray;
   border-radius: 10px;
 }
+/* ///////////THIRD CARD STYLES\\\\\\\\\\\\\\ */
+.card2 {
+  width: 100vw;
+  aspect-ratio: 16/9;
+  background-color: black;
+  background-image: url("../Images/Images/mars.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.card2__title{
+  font-size: 1rem;
+  padding: 1rem;
+  color: white;
+  font-family: monospace;
+  font-weight: bolder;
+  animation: titleGrow 5s linear forwards;
+}
+.blurCard {
+  background-color: hsla(0, 0%, 100%, 0.531);
+  position: absolute;
+  inset: 0;
+  right:50%;
+  backdrop-filter: blur(3px);
+}
+@keyframes titleGrow {
+  0% {
+    font-size: 1rem;
+  }
+  25% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 3rem;
+  }
+  75% {
+    font-size: 4rem;
+  }
+  100% {
+    font-size: 5rem;
+  }
+}
+
