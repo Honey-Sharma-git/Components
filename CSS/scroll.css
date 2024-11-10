@@ -8,7 +8,7 @@
 }
 * {
   margin: 0;
-  padding: 0;
+  padding: 0.5rem;
 }
 img {
   display: block;
@@ -30,6 +30,95 @@ button {
   --blue-2: #1780a1;
   --blue-1: #0091ad;
   --BG-COLOR: white;
+  /* More colors */
+  --BODY-BG-COLOR: #36454f;
+  --HEADER-BG-COLOR: #848884;
+  --MAIN-BG-COLOR: #71797e;
+  --FOOTER-BG-COLOR: #848884;
+  --PARA-BG-COLOR: #7393b3;
+  --ARTICLE-BG-COLOR: #e5e4e2;
+  --SECTION-BG-COLOR: #c0c0c0;
+  --ASIDE-BG-COLOR: aliceblue;
+  --NAV-BG-COLOR: #555655;
+  --BLOCKQUOTE-BG-COLOR: #8a9a5b;
 }
 
 /* GENERAL STYLES */
+body {
+  background-color: var(--BODY-BG-COLOR);
+  margin: 0;
+  padding: 0;
+}
+/* Headings */
+.pageH1 {
+  color: black;
+  margin: 1rem 0.2rem;
+}
+.pageH2 {
+  color: black;
+  margin: 1rem 0.2rem;
+}
+.pageH3 {
+  color: black;
+  margin: 1rem 0.2rem;
+}
+.pageH4 {
+  color: black;
+  margin: 1rem 0.2rem;
+}
+
+/* Sections */
+.pageHeader {
+  background-color: var(--HEADER-BG-COLOR);
+  min-height: 100vh;
+}
+.pageNav {
+  background-color: var(--NAV-BG-COLOR);
+  min-height: 50vh;
+}
+.pageMain {
+  background-color: var(--MAIN-BG-COLOR);
+}
+.pageAside {
+  background-color: var(--ASIDE-BG-COLOR);
+}
+.pageArticle {
+  background-color: var(--ARTICLE-BG-COLOR);
+  min-height: 300vh;
+}
+.pageSection {
+  background-color: var(--SECTION-BG-COLOR);
+  min-height: 70vh;
+  margin-top: 2rem;
+}
+.pageFooter {
+  background-color: var(--FOOTER-BG-COLOR);
+  margin: 1rem;
+  min-height: 50vh;
+}
+
+/* Others */
+.pagePara {
+  background-color: var(--PARA-BG-COLOR);
+  padding: 2rem;
+  margin: 1rem;
+}
+.pageBlockquote {
+  background-color: var(--BLOCKQUOTE-BG-COLOR);
+  min-height: 50vh;
+  margin: 1rem;
+}
+.pageQuote {
+  margin: 1rem;
+}
+.pageMain {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.otherWrapper {
+  width: calc(70%-5px);
+  flex-grow: 1;
+}
+.pageAside {
+  width: calc(30%-5px);
+}
