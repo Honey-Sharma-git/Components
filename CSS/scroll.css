@@ -61,6 +61,14 @@ button {
   }
 }
 /* CUSTOM SCROLL BAR */
+::-webkit-scrollbar {
+  background-color: darkslategray;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: lime;  
+}
+
 /* GENERAL STYLES */
 body {
   background-color: var(--BODY-BG-COLOR);
