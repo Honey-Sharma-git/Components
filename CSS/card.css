@@ -45,6 +45,26 @@ button {
   }
 }
 /* GENERAL STYLES */
+/* SCROLL-PROGRESS BAR */
+.scroll-watcher {
+  position: fixed;
+  top: 0;
+  background-color: var(--red-3);
+  height: 7px;
+  z-index: 1000;
+  width: 100%;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+  from {
+    transform: scale(0,1);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
 body {
   background-color: var(--BG-COLOR);
 }
@@ -166,7 +186,7 @@ body {
   display: grid;
   place-content: center;
 }
-.card2__title{
+.card2__title {
   font-size: 1rem;
   padding: 1rem;
   color: white;
@@ -178,7 +198,7 @@ body {
   background-color: hsla(0, 0%, 100%, 0.531);
   position: absolute;
   inset: 0;
-  right:50%;
+  right: 50%;
   backdrop-filter: blur(3px);
 }
 @keyframes titleGrow {
@@ -199,3 +219,15 @@ body {
   }
 }
 
+/* SCROLL PROGRESS BAR */
+/* ::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+  background-color: #4c4a4a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: red;
+  box-shadow: 0 -100vh 0 100vh red;
+}
+ */
+ 
