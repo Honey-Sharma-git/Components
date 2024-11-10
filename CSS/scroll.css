@@ -1,0 +1,35 @@
+/*CSS RESET*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  /* outline: 2px solid red; */
+  /* background-color: hsla(0, 100%, 50%, 0.05); */
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+button {
+  font: inherit;
+}
+
+/*VARIABLES*/
+:root {
+  /* colors*/
+  --red-1: #b7094c;
+  --red-2: #a01a58;
+  --red-3: #892b64;
+  --purple-1: #723c70;
+  --purple-2: #5c4d7d;
+  --blue-4: #455e89;
+  --blue-3: #2e6f95;
+  --blue-2: #1780a1;
+  --blue-1: #0091ad;
+  --BG-COLOR: white;
+}
+
+/* GENERAL STYLES */
