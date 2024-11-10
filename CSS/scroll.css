@@ -42,7 +42,25 @@ button {
   --NAV-BG-COLOR: #555655;
   --BLOCKQUOTE-BG-COLOR: #8a9a5b;
 }
-
+/* SCROLL PROGRESS BAR */
+.scroll-watcher {
+  padding: 0;
+  height: 7px;
+  width: 100%;
+  background-color: lime;
+  position: fixed;
+  top: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+  to {
+    transform: scale(1, 1);
+  }
+}
+/* CUSTOM SCROLL BAR */
 /* GENERAL STYLES */
 body {
   background-color: var(--BODY-BG-COLOR);
