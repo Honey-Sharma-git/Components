@@ -1,1 +1,12 @@
-console.log('this is youtube.js')
+function subscribed(){
+    let buttonStatus = document.querySelector('.js-subscribe-button');
+    
+    if(buttonStatus.innerText === 'Subscribe'){
+        buttonStatus.innerHTML = 'Subscribed';
+        document.querySelector('.js-subscribe-button').classList.add('subscribed-button');
+    } else {
+        buttonStatus.innerHTML = 'Subscribe';
+    document.querySelector('.js-subscribe-button').classList.remove('subscribed-button');
+    }
+
+}

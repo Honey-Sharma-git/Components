@@ -2,7 +2,7 @@
 *,
 *::after,
 *::before {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   box-sizing: border-box;
 }
 * {
@@ -13,4 +13,29 @@
 /* CSS VARIABLES */
 :root {
   --BUTTON-BG-COLOR: white;
+}
+
+/* GENERAL STYLES */
+body {
+  min-height: 100vh;
+  background-color: black;
+  display: grid;
+  place-content: center;
+}
+.button-container {
+  display: grid;
+  place-content: center;
+}
+.subscribe-button {
+  padding: 10px 15px;
+  font-size: 1.25rem;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.subscribed-button{
+    /* font-weight: bold; */
+    background-color: pink;
+
 }
